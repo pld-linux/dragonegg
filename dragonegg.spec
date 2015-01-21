@@ -1,18 +1,19 @@
 Summary:	DragonEgg - using LLVM as a GCC backend
 Summary(pl.UTF-8):	DragonEgg - użycie LLVM-a jako backendu GCC
 Name:		dragonegg
-Version:	3.5.0
+Version:	3.5.1
 Release:	1
 License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://llvm.org/releases/%{version}/dragonegg-%{version}.src.tar.xz
-# Source0-md5:	3689aab1f1bb79a07e19cc2ac85d91cb
+# Source0-md5:	3fd4838396f02476fd0308bf5a04d0ee
 URL:		http://dragonegg.llvm.org/
 # gcc plugin headers
 BuildRequires:	gcc >= 6:4.5
-BuildRequires:	llvm-devel >= 3.5.0
+BuildRequires:	gcc < 6:4.9
+BuildRequires:	llvm-devel >= 3.5.1
 Requires:	gcc >= 6:4.5
-Requires:	llvm >= 3.5.0
+Requires:	llvm >= 3.5.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
